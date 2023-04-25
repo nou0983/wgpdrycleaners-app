@@ -1,11 +1,15 @@
+import { useFormContext } from "../../contexts/formContext.context";
+import { formatDate } from "../../utils/formatDate";
 import Wrapper from "./infoContainer.styles";
 
 const InfoContainer = () => {
+  const { delivery } = useFormContext();
+
   return (
     <Wrapper>
-      <li class="delivery">
-        To Be Delivered By formattedDate after 5pm (If it falls on Public
-        Holidays, it will be on the following business day)
+      <li className="delivery">
+        To Be Delivered By {formatDate(delivery)} after 5pm (If it falls on
+        Public Holidays, it will be on the following business day)
       </li>
       <li>* Order under $50 will occur delivery charge of $10</li>
       <li>

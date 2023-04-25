@@ -12,6 +12,7 @@ const Wrapper = styled.main`
 
   button {
     border: none;
+    cursor: pointer;
   }
 
   li {

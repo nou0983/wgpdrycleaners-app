@@ -29,6 +29,14 @@ const Wrapper = styled.div`
 
   .btn {
     margin-top: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .btn:disabled {
+    opacity: 0.8;
+    cursor: auto;
   }
 `;
 

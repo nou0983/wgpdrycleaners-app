@@ -1,9 +1,18 @@
-import { CartTotal, InfoContainer } from "../index.component";
-// import { useCartContext } from "../../contexts/cartContext.context";
+import { useCartContext } from "../../contexts/cartContext.context";
+import { CartTotal, InfoContainer, CartItem } from "../index.component";
 import Wrapper from "./cartContent.styles";
 
 const CartContent = () => {
-  const cart = [];
+  const {
+    cart,
+    total,
+    totalItems,
+    shippingFee,
+    isLoading,
+    clearCart,
+    removeItem,
+    toggleAmount,
+  } = useCartContext();
 
   return (
     <Wrapper>
@@ -13,22 +22,36 @@ const CartContent = () => {
         <span>quantity</span>
         <span>subtotal</span>
       </div>
-      <div className="cart-body">
+      <ul className="cart-body">
         {cart.length < 1 ? (
-          <p className="cart-text">your cart is empty</p>
+          <li key="empty" className="cart-text">
+            your cart is empty
+          </li>
         ) : (
-          // cart.map((item) => <CartItem key={item.id} {...item} />)
-          <div>cartItem</div>
+          cart.map((product) => (
+            <CartItem
+              key={product.title}
+              {...product}
+              removeItem={removeItem}
+              toggleAmount={toggleAmount}
+            />
+          ))
         )}
-      </div>
+      </ul>
       <div className="cart-footer">
-        <button type="button" className="btn btn-blue">
+        <button type="button" className="btn btn-blue" onClick={clearCart}>
           clear shopping cart
         </button>
       </div>
-      <CartTotal total="0" totalItems="0" shippingFee="0" />
+      <CartTotal
+        total={total}
+        totalItems={totalItems}
+        shippingFee={shippingFee}
+        isLoading={isLoading}
+      />
       <InfoContainer />
     </Wrapper>
   );
 };
+
 export default CartContent;

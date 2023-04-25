@@ -11,8 +11,8 @@ const Wrapper = styled.section`
 
   form {
     background: linear-gradient(
-        rgba(255, 255, 255, 0.85),
-        rgba(255, 255, 255, 0.85)
+        rgba(255, 255, 255, 0.95),
+        rgba(255, 255, 255, 0.95)
       ),
       url(${img}) center/cover;
     border-radius: 3px;

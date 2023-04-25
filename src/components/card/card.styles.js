@@ -4,8 +4,8 @@ import img2 from "../../assets/imgs/pickup-delivery-min.jpg";
 import img3 from "../../assets/imgs/formal-wear-min.jpg";
 
 const Wrapper = styled.div`
-  flex-basis: 29%;
-  height: 40rem;
+  flex-basis: 25%;
+  height: 45rem;
   border-radius: 2px;
   position: relative;
   perspective: 1000px;
