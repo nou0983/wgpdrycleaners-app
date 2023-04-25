@@ -1,8 +1,6 @@
-import Wrapper from "./button.styles";
-
 const Button = ({color, text, href}) => {
   return (
-    <Wrapper href={href} className={`btn-${color}`}>{text}</Wrapper>
+    <a href={href} className={`btn btn-animated btn-${color}`}>{text}</a>
   )
 }
 
