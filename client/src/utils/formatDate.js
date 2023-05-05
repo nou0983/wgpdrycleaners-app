@@ -12,7 +12,7 @@ const formatDate = (express) => {
   weekday[6] = "Saturday";
 
   if (someDate.getHours() < 17) {
-    if (express === "Express (24hrs)") {
+    if (express === "super express (24hrs)") {
       if (
         weekday[someDate.getDay()] === "Friday" ||
         weekday[someDate.getDay()] === "Saturday"
@@ -23,7 +23,7 @@ const formatDate = (express) => {
       } else {
         numberOfDaysToAdd = 1;
       }
-    } else if (express === "Express (48hrs)") {
+    } else if (express === "express (48hrs)") {
       if (
         weekday[someDate.getDay()] === "Thursday" ||
         weekday[someDate.getDay()] === "Friday" ||
@@ -50,7 +50,7 @@ const formatDate = (express) => {
       }
     }
   } else {
-    if (express === "Express (24hrs)") {
+    if (express === "super express (24hrs)") {
       if (
         weekday[someDate.getDay()] === "Thursday" ||
         weekday[someDate.getDay()] === "Friday"
@@ -61,7 +61,7 @@ const formatDate = (express) => {
       } else {
         numberOfDaysToAdd = 2;
       }
-    } else if (express === "Express (48hrs)") {
+    } else if (express === "express (48hrs)") {
       if (
         weekday[someDate.getDay()] === "Wednesday" ||
         weekday[someDate.getDay()] === "Thursday" ||

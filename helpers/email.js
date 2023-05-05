@@ -37,6 +37,8 @@ exports.sendEmail = (req, res) => {
     cart,
     request,
     total,
+    totalItems,
+    shippingFee,
   } = req.body;
 
   let htmlEmail = `
@@ -46,6 +48,7 @@ exports.sendEmail = (req, res) => {
         <li>Customer Name: ${firstName} ${lastName}</li>
         <li>Customer Email: ${email}</li>
         <li>Customer Phone: ${mobile}</li>       
+        <li>Total Items: ${totalItems}</li>    
         <li>Delivery Type: ${delivery}</li> 
         <li>Address: ${address}, ${suburb}</li>         
       </ul>    
@@ -65,7 +68,9 @@ exports.sendEmail = (req, res) => {
     `</ul>` +
     `<h3>Additional Requests</h3>` +
     `<p>${request}</p>` +
-    `<h2>Total: $${total.toFixed(2)} ${delivery !== "standard (72hrs)" ? '(Express Service Included)' : ''}`;
+    `<h2>Total: $${(total + shippingFee).toFixed(2)} ${
+      delivery !== "standard (72hrs)" ? "(Express Service Included)" : ""
+    }`;
 
   const accessToken = OAuth2_client.getAccessToken();
 
