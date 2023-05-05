@@ -57,8 +57,8 @@ const Order = () => {
       };
 
       fetchOrder(formValues);
-      toggleAlert(true);
       resetCart();
+      toggleAlert(true);
       clearCart();
       clearValues();
     } catch (error) {
