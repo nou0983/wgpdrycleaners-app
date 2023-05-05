@@ -21,6 +21,7 @@ const INITIAL_CART_STATE = {
 const CART_ACTION_TYPE = {
   ADD_TO_CART: "ADD_TO_CART",
   CLEAR_CART: "CLEAR_CART",
+  RESET_CART: "RESET_CART",
   REMOVE_ITEM: "REMOVE_ITEM",
   SET_TOTAL: "SET_TOTAL",
   TOGGLE_AMOUNT: "TOGGLE_AMOUNT",
@@ -37,6 +38,8 @@ const cartReducer = (state, action) => {
       return { ...state, cart: payload };
     case CART_ACTION_TYPE.CLEAR_CART:
       return { ...state, cart: [] };
+    case CART_ACTION_TYPE.RESET_CART:
+      return { ...INITIAL_CART_STATE };
     case CART_ACTION_TYPE.REMOVE_ITEM:
       return { ...state, cart: payload };
     case CART_ACTION_TYPE.SET_TOTAL:

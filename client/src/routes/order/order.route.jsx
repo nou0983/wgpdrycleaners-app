@@ -9,8 +9,16 @@ import axios from "axios";
 import Wrapper from "./order.styles";
 
 const Order = () => {
-  const { totalItems, shippingFee, cart, total, clearCart, toggleLoading, toggleAlert } =
-    useCartContext();
+  const {
+    totalItems,
+    shippingFee,
+    cart,
+    total,
+    resetCart,
+    clearCart,
+    toggleLoading,
+    toggleAlert,
+  } = useCartContext();
   const {
     firstName,
     lastName,
@@ -50,6 +58,7 @@ const Order = () => {
 
       fetchOrder(formValues);
       toggleAlert(true);
+      resetCart();
       clearCart();
       clearValues();
     } catch (error) {

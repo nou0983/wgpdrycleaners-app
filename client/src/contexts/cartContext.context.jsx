@@ -63,6 +63,10 @@ const CartContextProvider = ({ children }) => {
     dispatch(createAction(CART_ACTION_TYPE.CLEAR_CART));
   };
 
+  const resetCart = () => {
+    dispatch(createAction(CART_ACTION_TYPE.RESET_CART));
+  }
+
   const toggleAmount = (title, newAmount) => {
     const payload = cart.map((product) => {
       if (product.title === title) {
@@ -117,6 +121,7 @@ const CartContextProvider = ({ children }) => {
     addToCart,
     removeItem,
     clearCart,
+    resetCart,
     toggleAmount,
     setTotal,
     toggleLoading,
