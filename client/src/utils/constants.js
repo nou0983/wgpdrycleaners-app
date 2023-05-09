@@ -131,4 +131,5 @@ const productsWithSize = [
   "woolrest sheepskin",
 ];
 
+
 export { priceList, products, productsWithSize };
