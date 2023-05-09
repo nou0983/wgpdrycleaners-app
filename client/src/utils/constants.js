@@ -37,7 +37,7 @@ const products = [
     category: "trouser",
     products: [
       { title: "standard trousers", price: 16 },
-      { title: "bright coloured trousers", price: 18 },
+      { title: "light coloured trousers", price: 18 },
       { title: "delicate trousers", price: 20 },
       { title: "shorts", price: 14 },
     ],
@@ -46,7 +46,7 @@ const products = [
     category: "jacket",
     products: [
       { title: "standard jacket", price: 18 },
-      { title: "bright coloured jacket", price: 20 },
+      { title: "light coloured jacket", price: 20 },
       { title: "delicate jacket", price: 22 },
       { title: "heavy jacket", price: 21 },
       { title: "padded jacket", price: 23 },
@@ -57,7 +57,7 @@ const products = [
     category: "suit/tie",
     products: [
       { title: "standard suit", price: 34 },
-      { title: "bright coloured suit", price: 38 },
+      { title: "light coloured suit", price: 38 },
       { title: "tuxedo", price: 38 },
       { title: "3 pieces suit", price: 44 },
       { title: "tie", price: 9 },
@@ -66,13 +66,13 @@ const products = [
   {
     category: "shirt/top",
     products: [
-      { title: "starched business shirt", price: 9 },
+      { title: "drycleaning business shirt", price: 9 },
       { title: "launder business shirt", price: 8 },
       { title: "shirt press only", price: 7 },
       { title: "shirt/top", price: 13 },
       { title: "delicate shirt/blouse/top", price: 15 },
-      { title: "knit/jerseys/cardigan", price: 16 },
-      { title: "bulky knit", price: 19 },
+      { title: "knit/jumper/cardigan", price: 16 },
+      { title: "bulky/long knit", price: 19 },
     ],
   },
   {

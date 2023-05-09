@@ -12,7 +12,7 @@ const HeroBox = () => {
       <Button color="white" text="place your order" href="#section-order" />
       <h2>agency</h2>
       <p>- grand drive laundromat, 9 / 70 grand drive, orewa</p>
-      <p>- hibiscus laundry, 8F moana avenue, orewa</p>
+      <p>- 8 moana avenue, orewa</p>
     </Wrapper>
   );
 };
